@@ -5,6 +5,8 @@
 
 import UIKit
 
+import StorageService
+
 final class ProfileViewController: UIViewController {
     
     static let headerIdent = "header"
@@ -24,8 +26,14 @@ final class ProfileViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        view.backgroundColor = .systemBackground
+        
+        // === Изменение цвета фона в зависимости от конфигурации ===
+        #if DEBUG
+        view.backgroundColor = .systemBlue      // Синий для Debug
+        #else
+        view.backgroundColor = .systemRed       // Красный для Release
+        #endif
+        // ========================================================
         
         view.addSubview(Self.postTableView)
         setupConstraints()

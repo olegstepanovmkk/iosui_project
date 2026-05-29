@@ -5,6 +5,8 @@
 
 import UIKit
 
+import StorageService
+
 class PhotosTableViewCell: UITableViewCell {
     
     // MARK: Visual objects

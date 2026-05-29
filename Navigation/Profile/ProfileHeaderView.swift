@@ -5,6 +5,8 @@
 
 import UIKit
 
+import StorageService
+
 final class ProfileHeaderView: UITableViewHeaderFooterView {
     
     // MARK: Visual objects

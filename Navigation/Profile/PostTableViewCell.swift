@@ -5,6 +5,8 @@
 
 import UIKit
 
+import StorageService
+
 class PostTableViewCell: UITableViewCell {
     
     private var viewCounter = 0

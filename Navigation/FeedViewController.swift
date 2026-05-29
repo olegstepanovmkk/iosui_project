@@ -5,6 +5,8 @@
 
 import UIKit
 
+import StorageService
+
 final class FeedViewController: UIViewController {
 
     override func viewDidLoad() {
