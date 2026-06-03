@@ -8,9 +8,8 @@ import UIKit
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    
     var window: UIWindow?
-    
+
     func application(_ application: UIApplication,
                      didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
@@ -24,14 +23,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let feedVC = FeedViewController()
         let feedNC = UINavigationController(rootViewController: feedVC)
         feedNC.tabBarItem = UITabBarItem(title: "Feed",
-                                         image: UIImage(systemName: "text.bubble"),
-                                         selectedImage: UIImage(systemName: "text.bubble.fill"))
+                                        image: UIImage(systemName: "text.bubble"),
+                                        selectedImage: UIImage(systemName: "text.bubble.fill"))
 
         let tabBarController = UITabBarController()
         tabBarController.tabBar.backgroundColor = .white
         tabBarController.viewControllers = [profileNC, feedNC]
         
-        // activate main window
+        // activate main window — исправленный вариант
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
@@ -39,4 +38,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
 }
-

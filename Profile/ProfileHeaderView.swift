@@ -122,10 +122,7 @@ final class ProfileHeaderView: UITableViewHeaderFooterView {
             make.leading.equalToSuperview().offset(20)
             make.trailing.equalToSuperview().offset(-20)
             make.height.equalTo(54)
-        }
-        
-        setStatusButton.snp.makeConstraints { make in
-            make.bottom.equalToSuperview().offset(-40)
+            make.bottom.equalToSuperview().offset(-40)   // ← теперь в одном месте
         }
     }
     // MARK: - Actions
