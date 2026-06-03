@@ -72,7 +72,7 @@ class PhotosTableViewCell: UITableViewCell {
         preview.layer.cornerRadius = 6
         preview.clipsToBounds = true
         
-        var image = Photos.shared.examples[index]
+        let image = Photos.shared.examples[index]
         
         // Применяем фильтр
         let processor = ImageProcessor()

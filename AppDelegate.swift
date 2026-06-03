@@ -30,8 +30,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         tabBarController.tabBar.backgroundColor = .white
         tabBarController.viewControllers = [profileNC, feedNC]
         
-        // activate main window — исправленный вариант
-        window = UIWindow(frame: UIScreen.main.bounds)
+        // Современный способ для iOS 26+
+        if let windowScene = UIApplication.shared.connectedScenes.first as? UIWindowScene {
+            window = UIWindow(windowScene: windowScene)
+        } else {
+            window = UIWindow(frame: UIScreen.main.bounds)
+        }
+        
         window?.rootViewController = tabBarController
         window?.makeKeyAndVisible()
         
